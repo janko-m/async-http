@@ -57,6 +57,8 @@ module Async
 					@bytesize ||= @chunks.inject(0) {|sum, chunk| sum + chunk.bytesize}
 				end
 				
+				alias length bytesize
+				
 				def empty?
 					@chunks.empty?
 				end
